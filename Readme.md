@@ -1,5 +1,5 @@
 # For Apollo D-Kit Advance Development
-##### AIUS, Harbin Institute of Technology, Harbin, 2023
+#### This private repo is belong to AIUS, Harbin Institute of Technology, Harbin, 2023
 
 ## 0. 写在最前面
 主要参考资料
