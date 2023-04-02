@@ -10,8 +10,9 @@ This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin I
 [github markdown 语法](http://aius.hit.edu.cn/main.htm)
 
 
+#### ---------------------------
+# 更新公告
 
-### 更新公告
 1. 本机新增了VSCODE IDE
 2. 新增minianaconda环境，启动请**conda activate base**，支持python语言的编写和编译
 3. 配置了opencv-python，pytorch-gpu等深度学习与视觉环境
@@ -21,7 +22,7 @@ This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin I
 
 4. 新增了**wechat for ubuntu**，可以在本机登录微信啦 ～^-^~
 
-
+#### ---------------------------
 
 ## 1. Camera模块
 ### 1.1 摄像头模块的调用
