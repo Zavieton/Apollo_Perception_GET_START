@@ -16,9 +16,9 @@ This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin I
 1. 本机新增了VSCODE IDE
 2. 新增minianaconda环境，启动请**conda activate base**，支持python语言的编写和编译
 3. 配置了opencv-python，pytorch-gpu等深度学习与视觉环境
->> conda activate base // 进入环境
->> 
->> conda deactivate // 退出
+> conda activate base // 进入环境
+> 
+> conda deactivate // 退出
 
 4. 新增了**wechat for ubuntu**，可以在本机登录微信啦 ～^-^~
 
@@ -57,13 +57,13 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 
 读取摄像头并进行实时检测 & 展示
 
->> cd \\project_dir\\
->> 
->> conda activate base
->> 
->> sh detect.sh
->> 
->> *or* python detect.py --source 0 --weights xxx
+> cd \\project_dir\\
+> 
+> conda activate base
+> 
+> sh detect.sh
+> 
+> *or* python detect.py --source 0 --weights xxx
 
 检测效果将大致如下
 ![Image text]([https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png](https://github.com/Zavieton/Apollo_Perception_GET_START/blob/main/1.png))
@@ -71,5 +71,13 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 
 
 ## 2. Lidar模块
+### 2.1 Lidar模块的检查
+
+
+
+### 2.2 开启Lidar模块并采用PointPillars模型进行三维点云检测
+
+
+
 
 
