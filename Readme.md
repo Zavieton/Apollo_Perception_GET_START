@@ -16,6 +16,7 @@ This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin I
 2. 新增minianaconda环境，启动请**conda activate base**，支持python语言的编写和编译
 3. 配置了opencv-python，pytorch-gpu等深度学习与视觉环境
 >> conda activate base // 进入环境
+>> 
 >> conda deactivate // 退出
 
 4. 新增了**wechat for ubuntu**，可以在本机登录微信啦 ～^-^~
