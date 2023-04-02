@@ -22,9 +22,26 @@ This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin I
 4. 新增了**wechat for ubuntu**，可以在本机登录微信啦 ～^-^~
 
 
+
 ## 1. Camera模块
+### 1.1 摄像头模块的调用
+摄像头模块调用采用opencv-python读取端口的方式进行，其中Apollo搭载两个单目相机，端口号分别为0/2，可以采用如下的方式调用端口并读取数据
 
+'''
+import cv2
+import numpy as np
 
+cap = cv2.VideoCapture(0)
+while(1):
+    # get a frame
+    ret, frame = cap.read()
+    # show a frame
+    cv2.imshow("capture", frame)
+    if cv2.waitKey(1) & 0xFF == ord('q'):
+        break
+cap.release()
+cv2.destroyAllWindows() 
+'''
 
 
 ## 2. Lidar模块
