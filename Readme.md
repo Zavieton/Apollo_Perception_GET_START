@@ -57,8 +57,11 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 读取摄像头并进行实时检测 & 展示
 
 >> cd \\project_dir\\
+>> 
 >> conda activate base
+>> 
 >> sh detect.sh
+>> 
 >> # or python detect.py --source 0 --weights xxx
 
 检测效果将大致如下
