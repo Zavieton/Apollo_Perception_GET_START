@@ -7,7 +7,7 @@ This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin I
 1. [Apollo](https://apollo.baidu.com)
 2. [Apollo开放平台8.0版文档](https://apollo.baidu.com/community/Apollo-Homepage-Document/Apollo_Doc_CN_8_0?doc=%2F%25E4%25BD%25BF%25E7%2594%25A8%25E6%258C%2587%25E5%258D%2597%2F%25E5%25BF%25AB%25E9%2580%259F%25E4%25B8%258A%25E6%2589%258B)
 
-[github markdown 语法](http://aius.hit.edu.cn/main.htm)
+3. [github markdown 语法](http://aius.hit.edu.cn/main.htm)
 
 
 ---
@@ -66,6 +66,8 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 >> *or* python detect.py --source 0 --weights xxx
 
 检测效果将大致如下
+![Image text]([https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png](https://github.com/Zavieton/Apollo_Perception_GET_START/blob/main/1.png))
+
 
 
 ## 2. Lidar模块
