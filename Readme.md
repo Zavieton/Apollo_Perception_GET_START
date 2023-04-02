@@ -62,7 +62,7 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 >> 
 >> sh detect.sh
 >> 
->> # or python detect.py --source 0 --weights xxx
+>> *or* python detect.py --source 0 --weights xxx
 
 检测效果将大致如下
 
