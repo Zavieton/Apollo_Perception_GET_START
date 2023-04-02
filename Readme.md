@@ -27,7 +27,7 @@ This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin I
 ### 1.1 摄像头模块的调用
 摄像头模块调用采用opencv-python读取端口的方式进行，其中Apollo搭载两个单目相机，端口号分别为0/2，可以采用如下的方式调用端口并读取数据
 
-'''
+```python
 import cv2
 import numpy as np
 
@@ -41,8 +41,14 @@ while(1):
         break
 cap.release()
 cv2.destroyAllWindows() 
-'''
+```
 
+**要注意的是**，apollo存在端口占用的问题。
+apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义代码将无法读取到端口信息，需要关闭对应的端口
+可以进入 cyber_monitor 查看调用情况
+
+
+### 1.2 基于camera的自动驾驶环境下的目标检测
 
 ## 2. Lidar模块
 
