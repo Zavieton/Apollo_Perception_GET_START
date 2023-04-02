@@ -49,6 +49,21 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 
 
 ### 1.2 基于camera的自动驾驶环境下的目标检测
+我们的工作主要参考了[YOLOv5](https://github.com/ultralytics/yolov5/tree/v5.0)实时目标检测算法，并在此基础上进行优化 
+相关的代码部署在 xxxxxx 目录
+
+检测模型的训练基于[KITTI](https://www.cvlibs.net/datasets/kitti/)数据集进行，考虑到该开源数据集历史相对悠久（~10year），且采集自国外场景。当前环境下的一些视觉特征（车辆款式、行人穿搭等）与数据集略有出入，因此检测可能产生误检 ~-.-~
+
+读取摄像头并进行实时检测 & 展示
+
+>> cd \\project_dir\\
+>> conda activate base
+>> sh detect.sh
+>> # or python detect.py --source 0 --weights xxx
+
+检测效果将大致如下
+
 
 ## 2. Lidar模块
+
 
