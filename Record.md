@@ -58,7 +58,7 @@ header {
 
 ### 3. 从记录文件中读取和写入消息Demo
 
-#### 3.1 Read messages
+#### 3.1 读取数据
 ```python
 from cyber_record.record import Record
 
@@ -68,7 +68,7 @@ for topic, message, t in record.read_messages():
    print("{}, {}, {}".format(topic, type(message), t))
 ```
 
-#### 3.2 Filter Read
+#### 3.2 过滤数据
 ```python
 def read_filter_by_both():
    record = Record(file_name)
