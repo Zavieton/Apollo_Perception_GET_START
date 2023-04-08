@@ -115,7 +115,7 @@ for topic, message, t in record.read_messages():
     # or use timestamp as image file name
     # image_parser.parse(image, t) 
 ```
-recode记录的图片将会以逐帧形式保存至output_path，便于进一步分析
+Recode记录的图片将会以逐帧形式保存至output_path，便于进一步分析
 
 
 ## 2. Lidar传感器的实时感知
