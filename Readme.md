@@ -159,9 +159,21 @@ Recode记录的图片将会以逐帧形式保存至output_path，便于进一步
 
 ![2021-07-09 19-06-23屏幕截图_2ca9de4](https://user-images.githubusercontent.com/46212574/230709676-ddcee15a-38ec-44ac-a444-cc4d8edaee9a.png)
 
-操作无人车运动，此时Dreamviewer应该可以观察到感知结果
+操作无人车运动，此时Dreamviewer应该可以观察到感知结果，类似这样（不过应该没有车道线）
+![Screenshot from 2021-07-14 12-42-23_6c87dd5](https://user-images.githubusercontent.com/46212574/230709898-9605a8ab-40d9-46ed-aeb0-f8109295b990.png)
+
 
 ### 2.3 算法的改进
+#### 2.3.1 
+Apollo内置算法基于Pointpillars进行了改进 
+![image](https://user-images.githubusercontent.com/46212574/230710166-f6bc17ed-e415-4bad-8083-5662c0fb25b5.png)
+
+使用MMDetection3D框架进行训练，在KITTI验证集上结果如下表所示,PointPillars的模型指标来自于Mmdetction3d官方。将PointPillars和模型在KITTI数据集上的检测结果进行了可视化，如下图所示。从图中可以看出模型具有更好的检出效果。可以看到，模型可以召回被截断和阻挡的车辆：
+![image](https://user-images.githubusercontent.com/46212574/230710184-43f1d9f8-c651-4e78-a61f-68443f7862b7.png)
+![image](https://user-images.githubusercontent.com/46212574/230710186-2bb28075-c13b-4af3-a7e5-b29dc31a4bb1.png)
+
+#### 2.3.2
+如果后续对新模型进行部署
 
 
 ## 3. 点云数据的记录和可视化
