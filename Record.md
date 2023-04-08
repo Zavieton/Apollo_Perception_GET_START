@@ -13,7 +13,7 @@
 
 ### 1. 可以通过以下命令获取记录文件中的信息
 
-1. cyber_record info will output the statistics of the record file.
+1. cyber_record info
 
 > cyber_record info -f example.record.00000
 
@@ -37,7 +37,7 @@ channel_number: 8
 /apollo/prediction                    , apollo.prediction.PredictionObstacles , 2
 ```
 
-### 2. cyber_record echo will print the message of the specified topic to the terminal.
+### 2. cyber_record echo
 
 >  cyber_record echo -f example.record.00000 -t /apollo/canbus/chassis
 
