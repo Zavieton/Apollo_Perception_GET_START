@@ -18,13 +18,12 @@ Anything connect E-mail *zavieton@163.com*.
 
 0. 不允许有人用Ubuntu的默认壁纸
 1. 本机新增了VSCODE IDE
-2. 新增minianaconda环境，启动请**conda activate base**，支持python语言的编写和编译
-3. 【HighLight】配置了opencv-python，pytorch-gpu等深度学习与视觉环境
-
+2. 新增minianaconda环境，启动请**conda activate base**，支持python语言的编写和编译 
 > conda activate base // 进入环境
 > 
 > conda deactivate // 退出
 
+3. 【HighLight】配置了opencv-python，pytorch-gpu等深度学习与视觉环境
 4. 新增了**wechat for ubuntu**，可以在本机登录微信啦 ～^-^~
 5. base环境下更新了open3d模块，便于对点云数据进行操作
 ---
@@ -119,9 +118,26 @@ for topic, message, t in record.read_messages():
 recode记录的图片将会以逐帧形式保存至output_path，便于进一步分析
 
 
-## 2. Lidar传感器的实施感知
-### 2.1 Lidar模块的检查
+## 2. Lidar传感器的实时感知
+在自动驾驶技术中，感知模块负责获取自动驾驶车辆周围环境信息，是自动驾驶车辆的“眼睛”，下游模块通过感知得到的环境信息来进行下一步决策。
 
+常用的感知传感器包括激光雷达、摄像头、毫米波雷达等，因为激光雷达传感器具备准确的障碍物定位能力等优点，Apollo 目前采取以其为主的自动驾驶感知方案。
+
+激光雷达感知模块接受来自激光雷达驱动的点云信息，利用这些点云信息进行障碍物的检测以及跟踪，得到的结果会被输出到感知融合模块进行下一步处理。
+
+激光雷达感知模块接收到点云数据之后，通过高精度地图 ROI（The Region of Interest）过滤器过滤 ROI 之外的点云，去除背景对象，例如：路边建筑物、树木等，过滤后的点云数据通过障碍物检测深度学习模型进行 3D 障碍物的检测和分类，然后对得到的障碍物进行跟踪，最终得到障碍物的形状、位置、类别、速度等信息。
+
+
+
+### 2.1 进入DreamViewer
+
+进入 Apollo Docker 环境。、
+>./apollo.sh
+在 Docker 环境里启动 Dreamview。
+>bash scripts/bootstrap.sh
+如果需要关闭 Dreamview，请您执行以下命令：
+>./scripts/bootstrap.sh stop
+在浏览器中输入网址 http://localhost:8888，打开 Dreamview,选择模式、车型和地图信息
 
 
 ### 2.2 开启Lidar模块并采用PointPillars模型进行三维点云检测
