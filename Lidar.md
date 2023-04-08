@@ -1,6 +1,6 @@
 
 
-## 2. Lidar传感器的实时感知
+# 2. Lidar传感器的实时感知
 在自动驾驶技术中，感知模块负责获取自动驾驶车辆周围环境信息，是自动驾驶车辆的“眼睛”，下游模块通过感知得到的环境信息来进行下一步决策。
 
 常用的感知传感器包括激光雷达、摄像头、毫米波雷达等，因为激光雷达传感器具备准确的障碍物定位能力等优点，Apollo 目前采取以其为主的自动驾驶感知方案。
@@ -11,7 +11,7 @@
 
 
 
-### 2.1 进入DreamViewer
+## 2.1 进入DreamViewer
 
 进入 Apollo Docker 环境。
 
@@ -28,7 +28,7 @@
 在浏览器中输入网址 http://localhost:8888，打开 Dreamview,选择模式、车型和地图信息
 
 
-### 2.2 开启Lidar模块并采用PointPillars模型进行三维点云检测
+## 2.2 开启Lidar模块并采用PointPillars模型进行三维点云检测
 把车开到空旷场地，便于接收GPS信号（比如主楼后花园、电机楼门口等）
 
 开启GPS、Transform、Location、Perception、Lidar模块
@@ -45,8 +45,8 @@
 ![Screenshot from 2021-07-14 12-42-23_6c87dd5](https://user-images.githubusercontent.com/46212574/230709898-9605a8ab-40d9-46ed-aeb0-f8109295b990.png)
 
 
-### 2.3 算法的改进
-#### 2.3.1 
+## 2.3 算法的改进
+### 2.3.1 
 Apollo内置算法基于Pointpillars进行了改进 
 ![image](https://user-images.githubusercontent.com/46212574/230710166-f6bc17ed-e415-4bad-8083-5662c0fb25b5.png)
 
@@ -54,5 +54,17 @@ Apollo内置算法基于Pointpillars进行了改进
 ![image](https://user-images.githubusercontent.com/46212574/230710184-43f1d9f8-c651-4e78-a61f-68443f7862b7.png)
 ![image](https://user-images.githubusercontent.com/46212574/230710186-2bb28075-c13b-4af3-a7e5-b29dc31a4bb1.png)
 
-#### 2.3.2
-如果后续对新模型进行部署
+### 2.3.2
+如果后续对新模型进行部署，可以使用Libtorch进行线上部署，利用Pytorch的Torch.jit.trace函数。
+
+可以参考
+
+>"modules/perception/lidar/lib/detector/point_pillars_detection/point_pillars.cc"
+
+为了方便Apollo模型的拓展，这里重构了检测模块以允许更多检测模型可以便捷的添加和切换。只需要修改对应的配置文件就可以选择启动不同的模型。相关的配置文件在路径下：
+
+> modules/perception/production/data/perception/lidar/models/lidar_obstacle_pipeline/
+
+下面有多个目录，对应着不同的设备名称。对于激光雷达传感器，修改目录下的"lidar_obstacle_detection.conf"配置文件的Detector关键字即可切换检测模型。
+
+同时，如果进行仿真和算法验证，更推荐下文中Recode数据的方法进行离线验证和仿真。该方法可以提取记录数据，并整理成文件格式(pcd等)，便于实际深度学习环境下的验证。
