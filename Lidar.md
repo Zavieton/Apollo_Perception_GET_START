@@ -44,6 +44,7 @@
 操作无人车运动，此时Dreamviewer应该可以观察到感知结果，类似这样（不过应该没有车道线）
 ![Screenshot from 2021-07-14 12-42-23_6c87dd5](https://user-images.githubusercontent.com/46212574/230709898-9605a8ab-40d9-46ed-aeb0-f8109295b990.png)
 
+**之前结果的历史记录** https://www.youtube.com/watch?v=F4fSd9BWccY
 
 ## 2.3 算法的改进
 ### 2.3.1 
@@ -68,3 +69,6 @@ Apollo内置算法基于Pointpillars进行了改进
 下面有多个目录，对应着不同的设备名称。对于激光雷达传感器，修改目录下的"lidar_obstacle_detection.conf"配置文件的Detector关键字即可切换检测模型。
 
 同时，如果进行仿真和算法验证，更推荐下文中Recode数据的方法进行离线验证和仿真。该方法可以提取记录数据，并整理成文件格式(pcd等)，便于实际深度学习环境下的验证。
+
+模型的后续导出和训练可以参考MMDetection3D，也可以自己实现~
+![mmdet3d_outdoor_demo](https://user-images.githubusercontent.com/46212574/230710481-c14bcb46-692d-4341-9adf-9c90949c4b22.gif)
