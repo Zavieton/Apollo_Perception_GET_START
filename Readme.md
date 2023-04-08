@@ -30,7 +30,7 @@ Anything connect E-mail *zavieton@163.com*.
 ---
 
 ## 1. 基于Camera的自定义目标检测算法部署
-### 1.1 摄像头模块的调用
+### 1.1 摄像头模块的直接调用
 摄像头模块调用采用opencv-python读取端口的方式进行，其中Apollo搭载两个单目相机，端口号分别为0/2，可以采用如下的方式调用端口并读取数据
 
 ```python
