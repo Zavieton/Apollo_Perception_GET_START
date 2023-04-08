@@ -71,4 +71,5 @@ Apollo内置算法基于Pointpillars进行了改进
 同时，如果进行仿真和算法验证，更推荐下文中Recode数据的方法进行离线验证和仿真。该方法可以提取记录数据，并整理成文件格式(pcd等)，便于实际深度学习环境下的验证。
 
 模型的后续导出和训练可以参考MMDetection3D，也可以自己实现~
+
 ![mmdet3d_outdoor_demo](https://user-images.githubusercontent.com/46212574/230710481-c14bcb46-692d-4341-9adf-9c90949c4b22.gif)
