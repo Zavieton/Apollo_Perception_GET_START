@@ -34,6 +34,6 @@ Anything connect E-mail *zavieton@163.com*.
 ### 2. [Lidar传感器的实时感知](https://github.com/Zavieton/Apollo_Perception_GET_START/edit/main/Lidar.md)
 
 
-### 3. [点云数据的记录和可视化](https://github.com/Zavieton/Apollo_Perception_GET_START/blob/main/Record.md)
+### 3. [数据的记录和可视化](https://github.com/Zavieton/Apollo_Perception_GET_START/blob/main/Record.md)
 
 ### 4. [Pycyber](https://github.com/daohu527/pycyber)
