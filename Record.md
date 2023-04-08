@@ -147,4 +147,51 @@ def write_point_cloud():
 
 
 
-## Lidar数据
+## Lidar 数据
+### 录制record包
+
+打开Dreamviewer界面
+> cd apollo
+> 
+> ./apollo.sh # 进入docker环境
+> 
+> bash ./scripts/bootstrap.sh
+> 
+> 如果需要关闭Dreamviewer 
+> 
+> bash./scripts/bootstrap.sh stop
+>
+> 在浏览器打开 http://localhost:8888/
+> 
+> 选择 --vehicle-- 和 --map--
+
+启动camera记录
+
+> 在Module Controller 启动所需要的Lidar模块和Recode模块
+>
+> 操控平台运动，此时已经开始记录数据
+> 
+> 关闭Recode模块，终止记录，记录的数据会保存至apollo/data下，格式类似于example.record.00000
+
+### 数据的解析和生成点云文件
+
+比如带解析文件为 
+
+运行脚本
+
+```
+
+```
+
+### 点云可视化
+
+安装open3d库
+
+>pip install open3d
+
+运行脚本
+
+```python
+
+
+```
