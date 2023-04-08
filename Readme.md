@@ -66,7 +66,7 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 > *or* python detect.py --source 0 --weights xxx
 
 检测效果将大致如下
-![Image text]([https://raw.githubusercontent.com/hongmaju/light7Local/master/img/productShow/20170518152848.png](https://github.com/Zavieton/Apollo_Perception_GET_START/blob/main/1.png))
+![Image text](https://github.com/Zavieton/Apollo_Perception_GET_START/blob/main/1.png)
 
 
 
