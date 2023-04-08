@@ -1,9 +1,11 @@
 # For Apollo D-Kit Advance Development
 This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin Institute of Technology, Harbin, 2023
+Anything connect E-mail *zavieton@163.com*
 
 ## 0. 写在最前面
 
 #### 本说明文档基于实例任务展开介绍，功能性调用方法穿插其中，不做专门章节展开。
+#### 希望参考文档的同学，具有基本的Linux操作系统基础和Python基础，同时期望具备C++和ROS基础，如果对感知进行改进需要具备计算机视觉和深度学习基础
 
 主要参考资料
 1. [Apollo](https://apollo.baidu.com)
@@ -17,9 +19,10 @@ This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin I
 
 1. 本机新增了VSCODE IDE
 2. 新增minianaconda环境，启动请**conda activate base**，支持python语言的编写和编译
-3. [HighLight]配置了opencv-python，pytorch-gpu等深度学习与视觉环境
+3. 【HighLight】配置了opencv-python，pytorch-gpu等深度学习与视觉环境
 
 > conda activate base // 进入环境
+> 
 > conda deactivate // 退出
 
 4. 新增了**wechat for ubuntu**，可以在本机登录微信啦 ～^-^~
@@ -74,8 +77,11 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 ### 1.3 基于Apollo recoder的数据记录和离线调用
 打开Dreamviewer界面
 > cd apollo
+> 
 > ./apollo.sh
-> bash scripts/apollo_neo.sh bootstrap
+> 
+> bash ./scripts/bootstrap.sh
+>
 
 
 ## 2. Lidar传感器的实施感知
