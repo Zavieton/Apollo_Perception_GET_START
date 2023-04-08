@@ -147,7 +147,21 @@ Recode记录的图片将会以逐帧形式保存至output_path，便于进一步
 
 
 ### 2.2 开启Lidar模块并采用PointPillars模型进行三维点云检测
+把车开到空旷场地，便于接收GPS信号（比如主楼后花园、电机楼门口等）
 
+开启GPS、Transform、Location、Perception、Lidar模块
+
+执行指令
+
+> cyber_monitor
+
+查看各个模块是否已经正常启动
+
+![2021-07-09 19-06-23屏幕截图_2ca9de4](https://user-images.githubusercontent.com/46212574/230709676-ddcee15a-38ec-44ac-a444-cc4d8edaee9a.png)
+
+操作无人车运动，此时Dreamviewer应该可以观察到感知结果
+
+### 2.3 算法的改进
 
 
 ## 3. 点云数据的记录和可视化
