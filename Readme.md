@@ -131,12 +131,18 @@ recode记录的图片将会以逐帧形式保存至output_path，便于进一步
 
 ### 2.1 进入DreamViewer
 
-进入 Apollo Docker 环境。、
+进入 Apollo Docker 环境。
+
 >./apollo.sh
+>
 在 Docker 环境里启动 Dreamview。
+
 >bash scripts/bootstrap.sh
+>
 如果需要关闭 Dreamview，请您执行以下命令：
+
 >./scripts/bootstrap.sh stop
+>
 在浏览器中输入网址 http://localhost:8888，打开 Dreamview,选择模式、车型和地图信息
 
 
