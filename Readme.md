@@ -88,7 +88,8 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 > 在浏览器打开 http://localhost:8888/
 > 
 > 选择 --vehicle-- 和 --map--
->
+
+启动camera记录
 > 在Module Controller 启动所需要的Camera模块和Recode模块
 >
 > 操控平台运动，此时已经开始记录数据
