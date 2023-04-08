@@ -146,6 +146,50 @@ def write_point_cloud():
 ```
 
 
+## Camera 数据
+参考 [Camera](https://github.com/Zavieton/Apollo_Perception_GET_START/edit/main/Camera.md)
+
+打开Dreamviewer界面
+> cd apollo
+> 
+> ./apollo.sh # 进入docker环境
+> 
+> bash ./scripts/bootstrap.sh
+> 
+> 如果需要关闭Dreamviewer 
+> 
+> bash./scripts/bootstrap.sh stop
+>
+> 在浏览器打开 http://localhost:8888/
+> 
+> 选择 --vehicle-- 和 --map--
+
+启动camera记录
+> 在Module Controller 启动所需要的Camera模块和Recode模块
+>
+> 操控平台运动，此时已经开始记录数据
+> 
+> 关闭Recode模块，终止记录，记录的数据会保存至apollo/data下，格式类似于example.record.00000
+> 
+
+基于上述生成的记录文件，可以从中提取出图像信息，并用于进一步的离线分析
+> conda activate base
+
+> pip3 install cyber_record record_msg
+
+保存图片
+```python
+from record_msg.parser import ImageParser
+
+image_parser = ImageParser(output_path='../test')
+for topic, message, t in record.read_messages():
+  if topic == "/apollo/sensor/camera/front_6mm/image":
+    image_parser.parse(image)
+    # or use timestamp as image file name
+    # image_parser.parse(image, t) 
+```
+Recode记录的图片将会以逐帧形式保存至output_path，便于进一步分析
+
 
 ## Lidar 数据
 ### 录制record包
@@ -195,3 +239,7 @@ def write_point_cloud():
 
 
 ```
+
+## 其他传感器数据
+
+
