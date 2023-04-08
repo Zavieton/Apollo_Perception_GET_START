@@ -1,6 +1,6 @@
 # For Apollo D-Kit Advance Development
 This private repo is belong to [AIUS](http://aius.hit.edu.cn/main.htm), Harbin Institute of Technology, Harbin, 2023
-Anything connect E-mail *zavieton@163.com*
+Anything connect E-mail *zavieton@163.com*.
 
 ## 0. 写在最前面
 
@@ -10,7 +10,6 @@ Anything connect E-mail *zavieton@163.com*
 主要参考资料
 1. [Apollo](https://apollo.baidu.com)
 2. [Apollo开放平台8.0版文档](https://apollo.baidu.com/community/Apollo-Homepage-Document/Apollo_Doc_CN_8_0?doc=%2F%25E4%25BD%25BF%25E7%2594%25A8%25E6%258C%2587%25E5%258D%2597%2F%25E5%25BF%25AB%25E9%2580%259F%25E4%25B8%258A%25E6%2589%258B)
-
 3. [github markdown 语法](http://aius.hit.edu.cn/main.htm)
 
 
@@ -81,7 +80,9 @@ apollo cyber_launch (命令行或dreamviewer开启摄像头后), 本地自定义
 > ./apollo.sh
 > 
 > bash ./scripts/bootstrap.sh
->
+> 如果需要关闭Dreamviewer 
+> bash./scripts/bootstrap.sh stop
+
 
 
 ## 2. Lidar传感器的实施感知
