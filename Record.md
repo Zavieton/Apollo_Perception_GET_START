@@ -392,4 +392,20 @@ if __name__ == '__main__':
 
 ## 其他传感器数据
 
+```python
+from cyber_record.record import Record
+from record_msg.parser import PointCloudParser
+
+file_name = "/home/apollo/apollo/data/bag/2023-04-07-15-45-03/20230407154503.record.00000"
+record = Record(file_name)
+# for topic, message, t in record.read_messages():
+    # print("{}, {}, {}".format(topic, message, t))
+    # break
+    # print(topic)
+pointcloud_parser = PointCloudParser('./store/lidar')
+for topic, message, t in record.read_messages():
+    if topic == // 传感器Module //:
+        print(message)
+
+```
 
