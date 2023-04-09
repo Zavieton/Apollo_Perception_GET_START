@@ -16,7 +16,6 @@ Anything connect E-mail *zavieton@163.com*.
 ---
 ## 更新公告
 
-0. 不允许有人用Ubuntu的默认壁纸
 1. 本机新增了VSCODE IDE
 2. 新增minianaconda环境，启动请**conda activate base**，支持python语言的编写和编译 
 > conda activate base // 进入环境
