@@ -37,7 +37,7 @@ channel_number: 8
 /apollo/prediction                    , apollo.prediction.PredictionObstacles , 2
 ```
 
-### 2. cyber_record echo
+2. cyber_record echo
 
 >  cyber_record echo -f example.record.00000 -t /apollo/canbus/chassis
 
@@ -56,9 +56,9 @@ header {
 
 ```
 
-### 3. 从记录文件中读取和写入消息Demo
+### 2. 从记录文件中读取和写入消息Demo
 
-#### 3.1 读取数据
+#### 2.1 读取数据
 ```python
 from cyber_record.record import Record
 
@@ -68,7 +68,7 @@ for topic, message, t in record.read_messages():
    print("{}, {}, {}".format(topic, type(message), t))
 ```
 
-#### 3.2 过滤数据
+#### 2.2 过滤数据
 ```python
 def read_filter_by_both():
    record = Record(file_name)
@@ -77,7 +77,7 @@ def read_filter_by_both():
       print("{}, {}, {}".format(topic, type(message), t))
 ```
 
-#### 3.3 解析消息
+#### 2.3 解析消息
 
 > pip3 install record_msg -U
 
@@ -118,7 +118,7 @@ for topic, message, t in record.read_messages():
       # pointcloud_parser.parse(message, mode='binary')
       # pointcloud_parser.parse(message, mode='binary_compressed')
 ```
-#### 3.4 保存数据
+#### 2.4 保存数据
 **image**
 ```python
 def write_image():
