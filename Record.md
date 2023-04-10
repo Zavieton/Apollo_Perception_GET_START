@@ -81,6 +81,11 @@ def read_filter_by_both():
 
 > pip3 install record_msg -U
 
+如果报错 *Microsoft Visual C++ 14.0 is required.* 可以参考 [CSDN](https://blog.csdn.net/qzzzxiaosheng/article/details/125119006)
+
+解决方法如下
+> conda install libpython m2w64-toolchain -c msys2
+
 **csv format**
 ```python
 f = open("message.csv", 'w')
